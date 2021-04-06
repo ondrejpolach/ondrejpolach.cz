@@ -57,7 +57,7 @@ export default {
   apollo: {
     clientConfigs: {
       default: {
-        httpEndpoint: process.env.STRAPI_URL || 'http://localhost:1337/graphql',
+        httpEndpoint: process.env.STRAPI_URL || 'http://localhost:1337/graphql'
       }
     }
   },
@@ -65,12 +65,12 @@ export default {
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
-    
+
     theme: {
       dark: false,
       themes: {
         light: {
-          primary: colors.orange.darken2,         
+          primary: colors.orange.darken2
         }
       }
     }
@@ -81,6 +81,6 @@ export default {
   },
 
   env: {
-      IMAGES_URL: process.env.IMAGES_URL || 'http://localhost:1337'
+    IMAGES_URL: process.env.IMAGES_URL || 'http://localhost:1337'
   }
 }

@@ -1,14 +1,14 @@
 <template>
-    <client-only>
-        <Hero />
-    </client-only>
+  <client-only>
+    <Hero />
+  </client-only>
 </template>
 
 <script>
-import Hero from "../components/hero.vue";
+import Hero from '../components/hero.vue'
 export default {
-    components: {
-        Hero,
-    },
-};
+  components: {
+    Hero
+  }
+}
 </script>
