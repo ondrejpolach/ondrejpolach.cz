@@ -16,18 +16,18 @@
 
 <script>
 export default {
-    head() {
-      return {
-        title: 'Portfolio',
-        meta: [
-          {
-            hid: 'description',
-            name: 'description',
-            content: "Ondřej Polách | my web developer's portfolio"
-          }
-        ]
-      }
+  head () {
+    return {
+      title: 'Portfolio',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: "Ondřej Polách | my web developer's portfolio"
+        }
+      ]
     }
+  }
 }
 </script>
 

@@ -96,54 +96,54 @@
 </template>
 
 <script>
-import moment from "moment";
-import postsQuery from "~/apollo/queries/post/posts";
-import tagsQuery from "~/apollo/queries/tag/tags";
+import moment from 'moment'
+import postsQuery from '~/apollo/queries/post/posts'
+import tagsQuery from '~/apollo/queries/tag/tags'
 export default {
-    data() {
-        return {
-            posts: [],
-            tags: [],
-        };
-    },
+  data () {
+    return {
+      posts: [],
+      tags: []
+    }
+  },
 
-    async fetch() {
-        const { app } = this.$nuxt.context;
-        try {
-            let result = await app.apolloProvider.defaultClient.query({
-                query: postsQuery,
-            });
-            this.posts = result.data.posts;
-            result = await app.apolloProvider.defaultClient.query({
-                query: tagsQuery,
-            });
-            this.tags = result.data.tags;
-        } catch (error) {
-            console.error(error);
+  async fetch () {
+    const { app } = this.$nuxt.context
+    try {
+      let result = await app.apolloProvider.defaultClient.query({
+        query: postsQuery
+      })
+      this.posts = result.data.posts
+      result = await app.apolloProvider.defaultClient.query({
+        query: tagsQuery
+      })
+      this.tags = result.data.tags
+    } catch (error) {
+      console.error(error)
+    }
+  },
+
+  head () {
+    return {
+      title: 'Blog',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: "Ondřej Polách | my web developer's blog"
         }
-    },
+      ]
+    }
+  },
 
-    methods: {
-        formatDate(date) {
-            return moment(date).format("DD.MM.YYYY");
-        },
-    },
+  methods: {
+    formatDate (date) {
+      return moment(date).format('DD.MM.YYYY')
+    }
+  },
 
-    fetchKey: "blog",
-
-    head() {
-        return {
-            title: "Blog",
-            meta: [
-                {
-                    hid: "description",
-                    name: "description",
-                    content: "Ondřej Polách | my web developer's blog",
-                },
-            ],
-        };
-    },
-};
+  fetchKey: 'blog'
+}
 </script>
 
 <style >
