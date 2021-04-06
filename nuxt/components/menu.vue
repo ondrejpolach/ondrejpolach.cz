@@ -67,7 +67,7 @@ export default {
         },
         {
           icon: 'mdi-format-text',
-          title: 'something for colleagues',
+          title: 'Something for colleagues',
           link: '/blog'
         }
       ]
