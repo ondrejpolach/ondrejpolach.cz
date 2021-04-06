@@ -3,6 +3,9 @@
     <Menu>
       <template #activator="{ on }">
         <v-app-bar dense flat :class="onHomepage ? 'custom-app-bar' : ''">
+          <v-btn icon v-if="canBack" @click="$nuxt.$router.push({ path: '/blog' })">
+              <v-icon>mdi-chevron-left</v-icon>
+          </v-btn>
           <v-app-bar-title>{{ pageTitle }}</v-app-bar-title>
           <v-spacer />
           <v-app-bar-nav-icon color="primary" @click="on" />
@@ -43,6 +46,10 @@ export default {
       } else {
         return ''
       }
+    },
+
+    canBack() {
+        return this.$nuxt.$route.path.includes('/blog/')
     }
   }
 }

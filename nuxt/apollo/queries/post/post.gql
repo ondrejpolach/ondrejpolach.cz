@@ -1,6 +1,7 @@
 query Posts($id: ID!)  {
     post(id: $id) {
         id,
+        imageUrl,
         published_at,
         name,
         content,

@@ -2,7 +2,8 @@
   <v-container fluid fill-height class="blog pa-0 align-start">
     <v-container>
       <v-row>
-        <v-col sm="12" md="10">
+        <!-- <v-col sm="12" md="10"> -->
+        <v-col sm="12" md="12">
           <v-alert
             v-if="posts.length == 0"
             class="align-self-start mt-3"
@@ -29,7 +30,7 @@
                   <v-img contain :src="post.imageUrl" />
 
                   <v-card-title
-                    class="text-subtitle-1 font-weight-bold primary--text"
+                    class="text-h6 font-weight-bold primary--text mb-2"
                   >
                     {{ post.name }}
                   </v-card-title>
@@ -71,7 +72,7 @@
             </v-row>
           </v-container>
         </v-col>
-        <v-col sm="12" md="2">
+        <!-- <v-col sm="12" md="2">
           <v-container>
             <v-card>
               <v-card-title>
@@ -88,48 +89,61 @@
               </v-card-text>
             </v-card>
           </v-container>
-        </v-col>
+        </v-col> -->
       </v-row>
     </v-container>
   </v-container>
 </template>
 
 <script>
-import moment from 'moment'
-import postsQuery from '~/apollo/queries/post/posts'
-import tagsQuery from '~/apollo/queries/tag/tags'
+import moment from "moment";
+import postsQuery from "~/apollo/queries/post/posts";
+import tagsQuery from "~/apollo/queries/tag/tags";
 export default {
-  data () {
-    return {
-      posts: [],
-      tags: []
-    }
-  },
+    data() {
+        return {
+            posts: [],
+            tags: [],
+        };
+    },
 
-  async fetch () {
-    const { app } = this.$nuxt.context
-    try {
-      let result = await app.apolloProvider.defaultClient.query({
-        query: postsQuery
-      })
-      this.posts = result.data.posts
-      result = await app.apolloProvider.defaultClient.query({
-        query: tagsQuery
-      })
-      this.tags = result.data.tags
-    } catch (error) {
-      console.error(error)
-    }
-  },
+    async fetch() {
+        const { app } = this.$nuxt.context;
+        try {
+            let result = await app.apolloProvider.defaultClient.query({
+                query: postsQuery,
+            });
+            this.posts = result.data.posts;
+            result = await app.apolloProvider.defaultClient.query({
+                query: tagsQuery,
+            });
+            this.tags = result.data.tags;
+        } catch (error) {
+            console.error(error);
+        }
+    },
 
-  methods: {
-    formatDate (date) {
-      return moment(date).format('DD.MM.YYYY')
-    }
-  },
+    methods: {
+        formatDate(date) {
+            return moment(date).format("DD.MM.YYYY");
+        },
+    },
 
-  fetchKey: 'blog'
-}
+    fetchKey: "blog",
+
+    head() {
+        return {
+            title: "Blog",
+            meta: [
+                {
+                    hid: "description",
+                    name: "description",
+                    content: "Ondřej Polách | my web developer's blog",
+                },
+            ],
+        };
+    },
+};
 </script>
 
 <style >
