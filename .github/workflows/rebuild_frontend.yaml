@@ -3,6 +3,9 @@ on:
   workflow_dispatch:
     branches:
       - main
+defaults:
+  run:
+    working-directory: ./nuxt
 jobs:
   build:
     runs-on: ubuntu-latest
