@@ -41,15 +41,6 @@ jobs:
       - name: Run generate 👀
         run: yarn generate:prod
         
-      - name: Deploy to Firebase
-        uses: FirebaseExtended/action-hosting-deploy@v0
-        with:
-          repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_ONDREJPOLACHCZ }}'
-          channelId: live
-          projectId: ondrejpolachcz
-        env:
-          FIREBASE_CLI_PREVIEWS: hostingchannels
       - name: Deploy to Firebase hosting live
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
