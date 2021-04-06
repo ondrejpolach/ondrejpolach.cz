@@ -63,6 +63,19 @@ export default {
             return moment(date).format("DD.MM.YYYY");
         },
     },
+
+    head() {
+        return {
+            title: this.post ? this.post.name : 'příspěvek',
+            meta: [
+                {
+                    hid: "description",
+                    name: "description",
+                    content: `Ondřej Polách | ${this.post ? this.post.name : 'příspěvek'}`,
+                },
+            ],
+        };
+    },
 };
 </script>
 
