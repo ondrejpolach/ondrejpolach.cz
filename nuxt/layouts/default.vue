@@ -2,7 +2,7 @@
   <v-app>
     <Menu>
       <template #activator="{ on }">
-        <v-app-bar dense flat :class="onHomepage ? 'custom-app-bar' : ''"> 
+        <v-app-bar dense flat :class="onHomepage ? 'custom-app-bar' : ''">
           <v-app-bar-title>{{ pageTitle }}</v-app-bar-title>
           <v-spacer />
           <v-app-bar-nav-icon color="primary" @click="on" />
@@ -43,7 +43,7 @@ export default {
       } else {
         return ''
       }
-    },
+    }
   }
 }
 </script>
