@@ -1,0 +1,13 @@
+query Posts {
+    posts {
+        id,
+        imageUrl,
+        published_at,
+        name,        
+        content,
+        description
+        tags {
+          name
+        }
+    }
+}

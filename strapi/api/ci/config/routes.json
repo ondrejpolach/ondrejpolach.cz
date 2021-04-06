@@ -1,0 +1,12 @@
+{
+    "routes": [
+      {
+        "method": "POST",
+        "path": "/ci",
+        "handler": "ci.invokeGithubWebhook",
+        "config": {
+          "policies": []
+        }
+      }
+    ]
+  }
