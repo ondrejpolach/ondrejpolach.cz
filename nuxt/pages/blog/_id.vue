@@ -121,9 +121,7 @@ export default {
 }
 </script>
 
-<style >
-@import url("https://github.githubassets.com/assets/gist-embed-128c4378b91120802003e5c0b2ac3a41.css");
-
+<style>
 .post {
     background: #fff;
 }
