@@ -1,6 +1,6 @@
 <template>
   <v-container fluid fill-height class="portfolio pa-0 d-flex align-center">
-    <v-container >
+    <v-container>
       <v-row>
         <v-col>
           <v-alert
@@ -23,7 +23,7 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: "Ondřej Polách | Portfolio"
+          content: 'Ondřej Polách | Portfolio'
         }
       ]
     }

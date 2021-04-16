@@ -1,4 +1,4 @@
-import Vue from 'vue';
-import {VueJsonp} from 'vue-jsonp';
+import Vue from 'vue'
+import { VueJsonp } from 'vue-jsonp'
 
-Vue.use(VueJsonp);
+Vue.use(VueJsonp)
