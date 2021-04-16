@@ -18,7 +18,7 @@
               <span
                 class="text-h6 text-sm-h5 text-md-h4 text-lg-h3 typewrite white--text"
                 data-period="500"
-                data-type="simply the bes,simply the web developer,backend developer,frontend developer,full-stack developer"
+                data-type="simply the bes,simply the web developer,backend developer,frontend developer,full-stack developer,from Czechia"
               >
                 <span
                   class="text-h6 text-sm-h5 text-md-h4 text-lg-h3 wrap"

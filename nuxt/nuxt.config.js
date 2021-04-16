@@ -44,14 +44,20 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     '@nuxtjs/markdownit',
-    '@nuxtjs/apollo'
+    '@nuxtjs/apollo',
+    '@nuxtjs/axios'
+  ],
+
+  plugins: [
+      '~/plugins/vue-jsonp.js'
   ],
 
   markdownit: {
     preset: 'default',
     linkify: true,
     breaks: true,
-    injected: true
+    injected: true,
+    html: true
   },
 
   apollo: {
