@@ -17,7 +17,7 @@
                 md="4"
               >
                 <v-card>
-                  <v-img contain :src="post.imageUrl" />
+                  <v-img contain :src="post.image.url" />
 
                   <v-card-title>
                     {{ post.name }}

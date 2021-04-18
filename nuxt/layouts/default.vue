@@ -67,6 +67,12 @@ export default {
         return ''
       }
     }
+  },
+  
+  mounted() {
+      if(process.client) {
+          this.$fire.analytics.setAnalyticsCollectionEnabled();
+      }
   }
 }
 </script>

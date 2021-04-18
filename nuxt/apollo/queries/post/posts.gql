@@ -1,7 +1,9 @@
 query Posts($tags: [String]) {
     posts(where: {tags: { name: $tags}}) {
         id,
-        imageUrl,
+        image {
+            url
+        },
         published_at,
         name,        
         content,

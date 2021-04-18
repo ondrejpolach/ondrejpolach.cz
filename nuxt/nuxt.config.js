@@ -46,7 +46,8 @@ export default {
   modules: [
     '@nuxtjs/markdownit',
     '@nuxtjs/apollo',
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    '@nuxtjs/firebase'
   ],
 
   markdownit: {
@@ -62,6 +63,21 @@ export default {
       default: {
         httpEndpoint: process.env.STRAPI_URL || 'http://localhost:1337/graphql'
       }
+    }
+  },
+
+  firebase: {
+    config: {
+      apiKey: 'AIzaSyCyYAzHJhDwtvchEFgRGg9StQULymIeWOU',
+      authDomain: 'ondrejpolachcz.firebaseapp.com',
+      projectId: 'ondrejpolachcz',
+      storageBucket: 'ondrejpolachcz.appspot.com',
+      messagingSenderId: '92262910262',
+      appId: '1:92262910262:web:c55ed80fcbee663dd94b97',
+      measurementId: 'G-QXHG4SN35W'
+    },
+    services: {
+      analytics: true
     }
   },
 
@@ -81,9 +97,5 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-  },
-
-  env: {
-    IMAGES_URL: process.env.IMAGES_URL || 'http://localhost:1337'
   }
 }

@@ -9,7 +9,7 @@
       <v-row class="justify-center">
         <v-col sm="12" md="8" class="pt-0">
           <v-sheet color="white" elevation="0" rounded class="pa-5">
-            <img :src="post.imageUrl">
+            <img :src="post.image.url">
           </v-sheet>
           <v-sheet color="white" elevation="0" rounded class="pa-5">
             <div class="my-3">
@@ -132,6 +132,9 @@ export default {
 
 .content h2 {
     margin: 15px 0 10px;
+}
+.content h3 {
+    margin: 15px 0 5px;
 }
 .content p {
     margin-bottom: 10px;
