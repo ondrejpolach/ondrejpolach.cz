@@ -68,11 +68,9 @@ export default {
       }
     }
   },
-  
-  mounted() {
-      if(process.client) {
-          this.$fire.analytics.setAnalyticsCollectionEnabled();
-      }
+
+  mounted () {
+    this.$fire.analytics.setAnalyticsCollectionEnabled()
   }
 }
 </script>
