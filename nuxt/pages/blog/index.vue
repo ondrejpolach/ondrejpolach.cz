@@ -17,7 +17,7 @@
                 md="4"
               >
                 <v-card>
-                  <v-img contain :src="post.image.url" />
+                  <v-img v-if="post.image != null" contain :src="post.image.url" />
 
                   <v-card-title>
                     {{ post.name }}
@@ -50,7 +50,7 @@
                       color="primary"
                       text
                       nuxt
-                      :to="'/blog/' + post.id"
+                      :to="'/blog/' + post.slug"
                     >
                       Read
                     </v-btn>

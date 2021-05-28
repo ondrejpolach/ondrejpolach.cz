@@ -9,7 +9,7 @@
       <v-row class="justify-center">
         <v-col sm="12" md="8" class="pt-0">
           <v-sheet color="white" elevation="0" rounded class="pa-5">
-            <img :src="post.image.url">
+            <img v-if="post.image" :src="post.image.url">
           </v-sheet>
           <v-sheet color="white" elevation="0" rounded class="pa-5">
             <div class="my-3">
@@ -41,7 +41,7 @@
 
 <script>
 import moment from 'moment'
-import postQuery from '~/apollo/queries/post/post'
+import postBySlugQuery from '~/apollo/queries/post/postBySlug'
 
 export default {
   data () {
@@ -55,12 +55,12 @@ export default {
     const { app, route } = this.$nuxt.context
     try {
       const { data } = await app.apolloProvider.defaultClient.query({
-        query: postQuery,
+        query: postBySlugQuery,
         variables: {
-          id: route.params.id
+          slug: route.params.id
         }
       })
-      this.post = data.post
+      this.post = data.posts[0]
       this.content = this.$md.render(
         await this.prepareContentForGistEmbed(this.post.content)
       )

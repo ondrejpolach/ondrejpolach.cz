@@ -39,7 +39,9 @@ export default {
     // https://go.nuxtjs.dev/typescript
     '@nuxt/typescript-build',
     // https://go.nuxtjs.dev/vuetify
-    '@nuxtjs/vuetify'
+    '@nuxtjs/vuetify',
+    // my generator for dynamic routes in sitemap
+    '@/modules/generator'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -47,7 +49,8 @@ export default {
     '@nuxtjs/markdownit',
     '@nuxtjs/apollo',
     '@nuxtjs/axios',
-    '@nuxtjs/firebase'
+    '@nuxtjs/firebase',
+    '@nuxtjs/sitemap'
   ],
 
   markdownit: {
@@ -78,6 +81,17 @@ export default {
     },
     services: {
       analytics: true
+    }
+  },
+
+  sitemap: {
+    hostname: 'https://ondrejpolach.cz',
+    gzip: true,
+    exclude: [],
+    defaults: {
+      changefreq: 'daily',
+      priority: 1,
+      lastmod: new Date()
     }
   },
 

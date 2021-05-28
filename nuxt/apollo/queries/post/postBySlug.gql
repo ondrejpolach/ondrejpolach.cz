@@ -1,6 +1,7 @@
-query Posts($id: ID!)  {
-    post(id: $id) {
+query PostBySlug($slug: String!)  {
+    posts(where:{slug: $slug}) {
         id,
+        slug,
         image {
             url
         },
