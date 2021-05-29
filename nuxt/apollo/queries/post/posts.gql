@@ -1,5 +1,5 @@
 query Posts($tags: [String]) {
-    posts(where: {tags: { name: $tags}}) {
+    posts(where: {tags: { name: $tags}}, , sort: "published_at:desc") {
         id,
         slug,
         image {
