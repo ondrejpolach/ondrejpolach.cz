@@ -61,10 +61,18 @@ export default {
                                   From technologic point of view, this system is hosting in Firebase project - cloud functions, firestore, CDN hosting for frontend written in Vue.`
         },
         {
-          title: '2021 / 05',
+          title: '2021 / 09',
+          name: 'Website for Patrik Pšeja',
+          color: 'success',
+          logo: require('~/assets/patrik_pseja_hero.png'),
+          position: 'top center',
+          description: `My first freelance web design for the greatest professional photographer I know. The basis of the website is Wordpress with the Novo template. But as usual, it is adjusted as much as possible.`
+        },
+        {
+          title: '2021 / 10',
           color: 'primary',
           name: 'Work in progress',
-          description: 'Currently working on some interesting projects. Stay tuned.'
+          description: 'Currently working on some interesting projects. One project going to last phase, I think I can be more opened, two letters, MH. Stay tuned.'
         }
       ]
     }
