@@ -69,7 +69,7 @@ export default {
 
   data () {
     return {
-      available: true,
+      available: false,
 
       rotateTexts: [],
       rotateElement: null,
