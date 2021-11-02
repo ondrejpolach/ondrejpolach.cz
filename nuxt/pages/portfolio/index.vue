@@ -82,10 +82,20 @@ export default {
         },
         {
           title: "2021 / 10",
+          name: "MeHub starting",
+          color: "success",
+          logo: require("~/assets/mehub_hero.png"),
+          position: "top center",
+          description: `MeHub is platform of add-ons for #1 e-commerce solution named Shoptet. I am glad to work on this amazing platform with Jirka Galandr. Jirka is business and marketing leader in this job and I am technical leader.
+                         It's multipart solution backended by cloud functions, no sql database, with frontend components in react for e-shops and with administation web application based on Vue with composition API.
+                         Currently there is first add-on: Bonus system. Others will be adding in next months.`,
+        },
+        {
+          title: "2021 / 11",
           color: "primary",
           name: "Work in progress",
           description:
-            "Currently working on some interesting projects. One project going to last phase, I think I can be more opened, two letters, MH. Stay tuned.",
+            "Currently working on extensions for MeHub. Stay tuned.",
         },
       ],
     };
