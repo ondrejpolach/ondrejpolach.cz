@@ -11,7 +11,8 @@
     "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
     "lint": "yarn lint:js",
     "lint:fix": "yarn lint:js --fix",
-    "deploy": "firebase deploy --only hosting"
+    "deploy": "firebase deploy --only hosting",
+    "do-publish": "yarn lint:fix && yarn build && yarn generate:prod && yarn deploy"
   },
   "dependencies": {
     "@nuxtjs/apollo": "^4.0.1-rc.5",

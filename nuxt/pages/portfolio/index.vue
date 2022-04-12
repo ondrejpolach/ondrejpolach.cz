@@ -28,7 +28,7 @@
               </v-card>
             </v-timeline-item>
           </v-timeline>
-          <v-card class="elevation-2 d-display d-md-none my-10"  v-for="(project, i) in projects" :key="i">
+          <v-card v-for="(project, i) in projects" :key="i" class="elevation-2 d-display d-md-none my-10">
             <v-img
               v-if="project.logo"
               :position="project.position"
@@ -50,69 +50,69 @@
 
 <script>
 export default {
-  data() {
+  data () {
     return {
       projects: [
         {
-          title: "2021 / 01",
-          color: "success",
-          name: "Start as freelancer",
-          logo: require("~/assets/hero.png"),
-          position: "center 30%",
+          title: '2021 / 01',
+          color: 'success',
+          name: 'Start as freelancer',
+          logo: require('~/assets/hero.png'),
+          position: 'center 30%',
           description:
-            "After 4 months of trying out various work as contractor, I decided to take the next step - start own business and go on a freelance journey. So far partly with the current job.",
+            'After 4 months of trying out various work as contractor, I decided to take the next step - start own business and go on a freelance journey. So far partly with the current job.'
         },
         {
-          title: "2021 / 04",
-          name: "MJC Zlín ordering and picking system",
-          color: "success",
-          logo: require("~/assets/velo-mjc-hero.png"),
-          position: "top center",
+          title: '2021 / 04',
+          name: 'MJC Zlín ordering and picking system',
+          color: 'success',
+          logo: require('~/assets/velo-mjc-hero.png'),
+          position: 'top center',
           description: `I developed multi-step ordering system for sales department of MJC Zlín - leading distributor of hairdressing supplies in Czech republic. 
                                   System also contains module for picking wares from stock based on created orders. Support also generation of invoices for external accounting system.
-                                  From technologic point of view, this system is hosting in Firebase project - cloud functions, firestore, CDN hosting for frontend written in Vue.`,
+                                  From technologic point of view, this system is hosting in Firebase project - cloud functions, firestore, CDN hosting for frontend written in Vue.`
         },
         {
-          title: "2021 / 09",
-          name: "Website for Patrik Pšeja",
-          color: "success",
-          logo: require("~/assets/patrik_pseja_hero.png"),
-          position: "top center",
-          description: `My first freelance web design for the greatest professional photographer I know. The basis of the website is Wordpress with the Novo template. But as usual, it is adjusted as much as possible.`,
+          title: '2021 / 09',
+          name: 'Website for Patrik Pšeja',
+          color: 'success',
+          logo: require('~/assets/patrik_pseja_hero.png'),
+          position: 'top center',
+          description: 'My first freelance web design for the greatest professional photographer I know. The basis of the website is Wordpress with the Novo template. But as usual, it is adjusted as much as possible.'
         },
         {
-          title: "2021 / 10",
-          name: "MeHub starting",
-          color: "success",
-          logo: require("~/assets/mehub_hero.png"),
-          position: "top center",
+          title: '2021 / 10',
+          name: 'MeHub starting',
+          color: 'success',
+          logo: require('~/assets/mehub_hero.png'),
+          position: 'top center',
           description: `MeHub is platform of add-ons for #1 e-commerce solution named Shoptet. I am glad to work on this amazing platform with Jirka Galandr. Jirka is business and marketing leader in this job and I am technical leader.
                          It's multipart solution backended by cloud functions, no sql database, with frontend components in react for e-shops and with administation web application based on Vue with composition API.
-                         Currently there is first add-on: Bonus system. Others will be adding in next months.`,
+                         Currently there is first add-on: Bonus system. Others will be adding in next months.`
         },
         {
-          title: "2021 / 11",
-          color: "primary",
-          name: "Work in progress",
+          title: '2022 / 04',
+          color: 'primary',
+          name: 'Work in progress',
           description:
-            "Currently working on extensions for MeHub. Stay tuned.",
-        },
-      ],
-    };
+            'Sometimes refactoring brings new ideas which are converted to new brand or product. It was happen. Proof of concept will transform to new market change product.'
+        }
+      ]
+    }
   },
-  head() {
+  head () {
     return {
-      title: "Portfolio",
+      title: 'Portfolio',
       meta: [
         {
-          hid: "description",
-          name: "description",
-          content: "Ondřej Polách | Portfolio",
-        },
-      ],
-    };
-  },
-};
+          hid: 'description',
+          name: 'description',
+          content: 'Ondřej Polách | Portfolio'
+        }
+      ]
+    }
+  }
+}
 </script>
 
 <style >
