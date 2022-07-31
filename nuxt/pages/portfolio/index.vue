@@ -4,21 +4,12 @@
       <v-row>
         <v-col>
           <v-timeline class="d-none d-md-block">
-            <v-timeline-item
-              v-for="(project, i) in projects"
-              :key="i"
-              :color="project.color"
-            >
+            <v-timeline-item v-for="(project, i) in projects" :key="i" :color="project.color">
               <template #opposite>
                 <span class="font-weight-bold">{{ project.title }}</span>
               </template>
               <v-card class="elevation-2">
-                <v-img
-                  v-if="project.logo"
-                  :position="project.position"
-                  height="250"
-                  :src="project.logo"
-                />
+                <v-img v-if="project.logo" :position="project.position" height="250" :src="project.logo" />
                 <v-card-title class="headline">
                   {{ project.name }}
                 </v-card-title>
@@ -29,12 +20,7 @@
             </v-timeline-item>
           </v-timeline>
           <v-card v-for="(project, i) in projects" :key="i" class="elevation-2 d-display d-md-none my-10">
-            <v-img
-              v-if="project.logo"
-              :position="project.position"
-              height="250"
-              :src="project.logo"
-            />
+            <v-img v-if="project.logo" :position="project.position" height="250" :src="project.logo" />
             <v-card-title class="headline">
               <span class="font-weight-bold pr-5">{{ project.title }}</span> {{ project.name }}
             </v-card-title>
@@ -91,11 +77,31 @@ export default {
                          Currently there is first add-on: Bonus system. Others will be adding in next months.`
         },
         {
-          title: '2022 / 04',
+          title: '2022 / 06',
+          name: 'Evidence system for Sport Orlita',
+          color: 'success',
+          logo: require('~/assets/orlita_hero.png'),
+          position: 'top center',
+          description: `At the beggining of this year I get contract for develop evidence system for Sport Orlita. 
+                        This company sale and borrow sport equipments, mainly for skiing and winter sports. 
+                        For years they evidence customers and its borrowings simply on paper. 
+                        Now they want to change this process. I designed and developed system for evidence 
+                        its customers and it's borrowings with notifications about expirations. 
+                        System running on GCP using NoSQL Firestore and hosting of Vue SPA. Frontend using Vue 3 composition API and tailwind components.`
+        },
+        {
+          title: '2022 / 07',
+          name: 'Contract for Elisoft',
+          color: 'primary',
+          description: `I am finishing first phase of long running contract for my past employer - Elisoft. It's really amazing project with working name Kernelia.
+                        Project is backended in GCP with Cloud functions (also new v2) and Firestore.`
+        },
+        {
+          title: '2022 / 08',
           color: 'primary',
           name: 'Work in progress',
-          description:
-            'Sometimes refactoring brings new ideas which are converted to new brand or product. It was happen. Proof of concept will transform to new market change product.'
+          description: `Sometimes refactoring brings new ideas which are converted to new brand or product. It was happen. Proof of concept will transform to new market change product.
+          In Q3 and Q4 we want to start new brand. It will be super, you'll see.`
         }
       ]
     }
