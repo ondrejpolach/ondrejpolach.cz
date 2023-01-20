@@ -92,16 +92,24 @@ export default {
         {
           title: '2022 / 07',
           name: 'Contract for Elisoft',
-          color: 'primary',
-          description: `I am finishing first phase of long running contract for my past employer - Elisoft. It's really amazing project with working name Kernelia.
-                        Project is backended in GCP with Cloud functions (also new v2) and Firestore.`
+          color: 'success',
+          description: `I am finishing first phase of contract for my past employer - Elisoft. It's really amazing project with working name Kernelia.
+                        Project is backended in GCP with Cloud functions (also new v2) and Firestore. Will be finished at Q1/2023.`
         },
         {
-          title: '2022 / 08',
+          title: '2022 / 12',
+          name: 'MeHub changes to Ellity',
+          color: 'success',
+          logo: require('~/assets/ellity.png'),
+          position: 'top center',
+          description: `Sometimes refactoring brings new ideas which are converted to new brand or product. It was happen. Proof of concept will transform to new market change product.
+          Ellity.eu was started. Next gen loyalty system for each e-shopers.`
+        },
+        {
+          title: '2023 / 01',
           color: 'primary',
           name: 'Work in progress',
-          description: `Sometimes refactoring brings new ideas which are converted to new brand or product. It was happen. Proof of concept will transform to new market change product.
-          In Q3 and Q4 we want to start new brand. It will be super, you'll see.`
+          description: 'There are some possible contracts from logistics for this year. Of course, Ellity will continue to evolve to offer additional features for even better customer retention solution.'
         }
       ]
     }
