@@ -18,7 +18,7 @@
               <span
                 class="text-h6 text-sm-h5 text-md-h4 text-lg-h3 typewrite white--text"
                 data-period="500"
-                data-type="simply the bes,simply the web developer,optimalizing your processes,cloud native,from Czech republic"
+                data-type="optimalizing your processes,cloud native,full-stacker,from Czech republic"
               >
                 <span
                   class="text-h6 text-sm-h5 text-md-h4 text-lg-h3 wrap"
