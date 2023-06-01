@@ -4,12 +4,21 @@
       <v-row>
         <v-col>
           <v-timeline class="d-none d-md-block">
-            <v-timeline-item v-for="(project, i) in projects" :key="i" :color="project.color">
+            <v-timeline-item
+              v-for="(project, i) in projects"
+              :key="i"
+              :color="project.color"
+            >
               <template #opposite>
                 <span class="font-weight-bold">{{ project.title }}</span>
               </template>
               <v-card class="elevation-2">
-                <v-img v-if="project.logo" :position="project.position" height="250" :src="project.logo" />
+                <v-img
+                  v-if="project.logo"
+                  :position="project.position"
+                  height="250"
+                  :src="project.logo"
+                />
                 <v-card-title class="headline">
                   {{ project.name }}
                 </v-card-title>
@@ -19,10 +28,20 @@
               </v-card>
             </v-timeline-item>
           </v-timeline>
-          <v-card v-for="(project, i) in projects" :key="i" class="elevation-2 d-display d-md-none my-10">
-            <v-img v-if="project.logo" :position="project.position" height="250" :src="project.logo" />
+          <v-card
+            v-for="(project, i) in projects"
+            :key="i"
+            class="elevation-2 d-display d-md-none my-10"
+          >
+            <v-img
+              v-if="project.logo"
+              :position="project.position"
+              height="250"
+              :src="project.logo"
+            />
             <v-card-title class="headline">
-              <span class="font-weight-bold pr-5">{{ project.title }}</span> {{ project.name }}
+              <span class="font-weight-bold pr-5">{{ project.title }}</span>
+              {{ project.name }}
             </v-card-title>
             <v-card-text>
               {{ project.description }}
@@ -39,6 +58,22 @@ export default {
   data () {
     return {
       projects: [
+        {
+          title: '1998 / 01',
+          color: 'success',
+          name: 'My first computer',
+          description:
+            "This year I got my first computer from my parents. It was a Pentium III with 128MB of RAM. That's when I started playing around with IT stuff. I was mostly interested in the hardware - overclocking, how what works and of course playing games. I became more interested in software in high school, where I learned Pascal and C++ and started writing code (sometimes around 2005)."
+        },
+        {
+          title: '2012 / 07',
+          color: 'success',
+          name: 'Software engineer in Elisoft',
+          logo: require('~/assets/eol_hero.png'),
+          position: 'top',
+          description:
+            "After completing my engineering degree at Brno University of technology, I joined Elisoft, which develops the accounting system branded as Ekonom. I developed the invoicing system Ekonom online. Then I manage development of cash system Ekonom receipt. And all time I took care of the company's IT infrastructure - firstly on demand and then in cloud."
+        },
         {
           title: '2021 / 01',
           color: 'success',
@@ -64,7 +99,8 @@ export default {
           color: 'success',
           logo: require('~/assets/patrik_pseja_hero.png'),
           position: 'top center',
-          description: 'My first freelance web design for the greatest professional photographer I know. The basis of the website is Wordpress with the Novo template. But as usual, it is adjusted as much as possible.'
+          description:
+            'My first freelance web design for the greatest professional photographer I know. The basis of the website is Wordpress with the Novo template. But as usual, it is adjusted as much as possible.'
         },
         {
           title: '2021 / 10',
@@ -106,10 +142,25 @@ export default {
           Ellity.eu was started. Next gen loyalty system for each e-shopers.`
         },
         {
-          title: '2023 / 01',
+          title: '2023 / 02',
+          name: 'Kernelia changes to Elicore',
+          color: 'success',
+          description: 'Project Kernelia was changed to Elicore - data core of Elisoft Company'
+        },
+        {
+          title: '2023 / 05',
+          name: 'Web for dental specialists',
+          color: 'success',
+          logo: require('~/assets/damismile.png'),
+          position: 'top center',
+          description: "I'm not much into websites, but sometimes it's nice. My wife also helped me with this. So it was kind of a family affair. The website serves as an informative platform for dental specialists from my city."
+        },
+        {
+          title: '2023 / 06',
           color: 'primary',
           name: 'Work in progress',
-          description: 'There are some possible contracts from logistics for this year. Of course, Ellity will continue to evolve to offer additional features for even better customer retention solution.'
+          description:
+            'I am continuing work on a contract dealing with the development of a logistics system for a Czech company. And of course, Ellity will continue to evolve to offer additional features for even better customer retention solution.'
         }
       ]
     }
@@ -129,7 +180,7 @@ export default {
 }
 </script>
 
-<style >
+<style>
 .portfolio {
   background: #fff;
 }
