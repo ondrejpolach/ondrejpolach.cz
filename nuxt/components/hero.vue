@@ -18,7 +18,7 @@
               <span
                 class="text-h6 text-sm-h5 text-md-h4 text-lg-h3 typewrite white--text"
                 data-period="500"
-                data-type="optimalizing your processes,cloud native,full-stacker,from Czech republic"
+                data-type="Ellity co-founder,full-stack developer,from Czech republic"
               >
                 <span
                   class="text-h6 text-sm-h5 text-md-h4 text-lg-h3 wrap"
@@ -49,7 +49,7 @@
             >mdi-email</v-icon>
               ondra@ondrejpolach.cz</a>
             <a
-              class="d-flex align-center text-subtitle-2 text-md-h6 text-decoration-none"
+              class="d-flex align-center text-subtitle-2 text-md-h6 mr-lg-15 text-decoration-none"
               href="tel:+420721736053"
               color="primary"
             ><v-icon
@@ -57,6 +57,18 @@
               color="primary"
             >mdi-phone</v-icon>
               +420 721 736 053</a>
+            <a
+              class="d-flex align-center text-subtitle-2 text-md-h6  mr-lg-15 text-decoration-none"
+              href="https://ellity.eu"
+              color="primary"
+            >
+              www.ellity.eu</a>
+            <a
+              class="d-flex align-center text-subtitle-2 text-md-h6 text-decoration-none"
+              href="https://galandr.com"
+              color="primary"
+            >
+              www.galandr.com</a>
           </div>
         </div>
       </v-col>
@@ -69,7 +81,7 @@ export default {
 
   data () {
     return {
-      available: false,
+      available: true,
 
       rotateTexts: [],
       rotateElement: null,

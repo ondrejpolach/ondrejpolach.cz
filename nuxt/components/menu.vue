@@ -56,18 +56,23 @@ export default {
       active: false,
       items: [
         {
-          icon: 'mdi-account',
-          title: 'About me',
+          icon: 'mdi-home',
+          title: 'Home',
           link: '/'
         },
         {
-          icon: 'mdi-poll',
-          title: 'Someting for clients',
+          icon: 'mdi-account-multiple-plus',
+          title: 'Join us',
+          link: '/career'
+        },
+        {
+          icon: 'mdi-history',
+          title: 'Portfolio and history',
           link: '/portfolio'
         },
         {
           icon: 'mdi-format-text',
-          title: 'Something for colleagues',
+          title: 'Some ideas',
           link: '/blog'
         }
       ]

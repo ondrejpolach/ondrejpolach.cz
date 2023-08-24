@@ -19,7 +19,7 @@
           >
             <v-icon>mdi-chevron-left</v-icon>
           </v-btn>
-          <v-app-bar-title>{{ pageTitle }}</v-app-bar-title>
+          <h1>{{ pageTitle }}</h1>
           <v-spacer />
           <v-app-bar-nav-icon color="primary" @click="on" />
         </v-app-bar>
@@ -62,7 +62,9 @@ export default {
       } else if (this.$nuxt.$route.path.includes('/blog')) {
         return 'Developer blog | Ondřej Polách'
       } else if (this.$nuxt.$route.path.includes('/portfolio')) {
-        return 'Portfolio | Ondej Polách'
+        return 'Portfolio and history | Ondřej Polách'
+      } else if (this.$nuxt.$route.path.includes('/career')) {
+        return 'Career in our freelance developer community | Ondřej Polách'
       } else {
         return ''
       }
@@ -88,5 +90,9 @@ html {
 .custom-app-bar {
     background-image: url("~/assets/background.png");
     background-repeat: repeat;
+}
+
+.v-app-bar .v-toolbar__content h1 {
+  font-size: 20px;
 }
 </style>
