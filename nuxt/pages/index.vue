@@ -18,7 +18,7 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: 'Ondřej Polách | I am simply the web developer'
+          content: 'Ondřej Polách | IT Consultant | Full-stack developer'
         }
       ]
     }

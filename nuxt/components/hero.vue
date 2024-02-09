@@ -3,22 +3,21 @@
     <v-row no-gutters class="fill-height">
       <v-col class="hero-back">
         <div
-          class="d-flex flex-column justify-space-between justify-sm-end fill-height"
+          class="d-flex flex-column justify-space-between justify-sm-end fill-height mx-5"
         >
-          <div class="my-sm-auto my-10">
-            <div>
+          <div class="my-sm-auto my-2 info-panel  d-flex d-sm-block flex-column justify-space-between">
+            <div class=" mb-2">
               <span
-                class="text-h6 text-sm-h5 text-md-h4 text-lg-h3 white--text"
-              >My name is
-                <span
-                  class="primary--text"
-                >Ondřej Polách</span></span>
+                class="text-h4 text-sm-h5 text-md-h4 text-lg-h3 white--text font-weight-bold"
+              >Crafting
+                <span class="primary--text">Innovative Future-Ready</span>
+                IT Solutions</span>
             </div>
             <div>
               <span
-                class="text-h6 text-sm-h5 text-md-h4 text-lg-h3 typewrite white--text"
+                class="text-h6 text-sm-h6 text-md-h5 text-lg-h4 typewrite white--text font-weight-bold"
                 data-period="500"
-                data-type="Ellity co-founder,full-stack developer,from Czech republic"
+                data-type="Ondřej Polách,IT consultant,full-stack developer,from Czech republic"
               >
                 <span
                   class="text-h6 text-sm-h5 text-md-h4 text-lg-h3 wrap"
@@ -32,15 +31,15 @@
             <span
               :class="
                 available
-                  ? 'd-flex align-center text-subtitle-2 text-md-h6 mr-lg-15 mb-5 mb-sm-0 green--text'
-                  : 'd-flex align-center text-subtitle-2 text-md-h6 mr-lg-15 mb-5 mb-sm-0 red--text'
+                  ? 'd-none d-sm-flex align-center text-subtitle-2 text-md-h6 mr-lg-15 mb-2 mb-sm-0 green--text'
+                  : 'd-none d-sm-flex align-center text-subtitle-2 text-md-h6 mr-lg-15 mb-2 mb-sm-0 red--text'
               "
             ><v-icon
               class="mr-2"
               :color="available ? 'green' : 'red'"
             >mdi-checkbox-blank-circle</v-icon>{{ availableText }}</span>
             <a
-              class="d-flex align-center text-subtitle-2 text-md-h6 mr-lg-15 mb-5 mb-sm-0 text-decoration-none"
+              class="d-flex align-center text-subtitle-2 text-md-h6 mr-lg-15 mb-2 mb-sm-0 text-decoration-none"
               href="mailto:ondra@ondrejpolach.cz?subject=Hire"
               color="primary"
             ><v-icon
@@ -49,7 +48,7 @@
             >mdi-email</v-icon>
               ondra@ondrejpolach.cz</a>
             <a
-              class="d-flex align-center text-subtitle-2 text-md-h6 mr-lg-15 text-decoration-none"
+              class="d-flex align-center text-subtitle-2 text-md-h6 mr-lg-15 mb-2 mb-sm-0 text-decoration-none"
               href="tel:+420721736053"
               color="primary"
             ><v-icon
@@ -57,18 +56,6 @@
               color="primary"
             >mdi-phone</v-icon>
               +420 721 736 053</a>
-            <a
-              class="d-flex align-center text-subtitle-2 text-md-h6  mr-lg-15 text-decoration-none"
-              href="https://ellity.eu"
-              color="primary"
-            >
-              www.ellity.eu</a>
-            <a
-              class="d-flex align-center text-subtitle-2 text-md-h6 text-decoration-none"
-              href="https://galandr.com"
-              color="primary"
-            >
-              www.galandr.com</a>
           </div>
         </div>
       </v-col>
@@ -81,7 +68,7 @@ export default {
 
   data () {
     return {
-      available: true,
+      available: false,
 
       rotateTexts: [],
       rotateElement: null,
@@ -108,7 +95,7 @@ export default {
       this.rotateElement = element
       this.rotateTexts = element.getAttribute('data-type').split(',')
       this.period =
-                parseInt(element.getAttribute('data-period'), 10) || 2000
+                parseInt(element.getAttribute('data-period'), 10)
       this.rotateText()
 
       setTimeout(() => {
@@ -179,17 +166,26 @@ export default {
     background-position: bottom right;
     background-size: cover;
     height: 100%;
-    margin-left: 15px;
+    margin: 0px;
 }
 
 a:hover {
     opacity: 0.7;
 }
 
+.info-panel {
+  height: 100%;
+}
+
 @media screen and (min-width: 600px) {
     .hero-back {
         background-size: contain;
     }
+
+    .info-panel {
+      height: auto;
+    }
+
 }
 
 @media screen and (min-width: 960px) {

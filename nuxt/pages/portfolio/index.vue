@@ -156,7 +156,7 @@ export default {
           description: "I'm not much into websites, but sometimes it's nice. My wife also helped me with this. So it was kind of a family affair. The website serves as an informative platform for dental specialists from my city."
         },
         {
-          title: '2023 / 06',
+          title: '2024 / 02',
           color: 'primary',
           name: 'Work in progress',
           description:

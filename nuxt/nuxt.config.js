@@ -103,7 +103,7 @@ export default {
       dark: false,
       themes: {
         light: {
-          primary: colors.orange.darken2
+          primary: colors.amber.darken2
         }
       }
     }

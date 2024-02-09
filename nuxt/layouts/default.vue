@@ -19,7 +19,9 @@
           >
             <v-icon>mdi-chevron-left</v-icon>
           </v-btn>
-          <h1>{{ pageTitle }}</h1>
+          <h1 class="page-title">
+            {{ pageTitle }}
+          </h1>
           <v-spacer />
           <v-app-bar-nav-icon color="primary" @click="on" />
         </v-app-bar>
@@ -94,5 +96,10 @@ html {
 
 .v-app-bar .v-toolbar__content h1 {
   font-size: 20px;
+}
+
+.page-title {
+  text-wrap: nowrap;
+    overflow: hidden;
 }
 </style>
