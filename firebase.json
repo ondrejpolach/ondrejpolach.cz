@@ -1,10 +1,17 @@
 {
   "hosting": {
-    "public": "nuxt/dist",
+    "public": "nuxt/dist-redirect",
     "ignore": [
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
+    ],
+    "redirects": [
+      {
+        "source": "/**",
+        "destination": "https://www.andylogy.com",
+        "type": 301
+      }
     ]
   }
 }
